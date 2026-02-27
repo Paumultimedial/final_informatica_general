@@ -1,0 +1,301 @@
+/* Defino los estilos generales del sitio, establezco el color de fondo,
+el color de la tipografia principal y la tipografía base. */
+body {
+    background-color: #eae9e9;
+    color: #a50104;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+/* Personalizo los enlaces del menú de navegación sobre el navbar. */
+.navbar-nav .nav-link {
+    color: #eae9e9; /* Color de navegación */
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+
+/* Color al pasar el cursor. */
+.navbar-nav .nav-link:hover {
+    color: #a50104;
+}
+
+
+/* Ajusto la tipografía de los elementos del menú desplegable. */
+.dropdown-item {
+    font-family: "Space Grotesk", sans-serif;
+    letter-spacing: 1px;
+}
+
+
+/* Dejo establecida una jerarquía visual para los títulos principales. */
+h1, h2, h3 {
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+
+/* Defino un peso tipográfico más liviano para los párrafos para mejorar la legibilidad
+y generar contraste con los títulos. */
+p {
+    font-weight: 300;
+}
+
+
+/* Configuro la sección hero como contenedor relativo para permitir posicionar
+elementos internos y controlar el recorte visual tipo banner. */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* altura tipo banner */
+    overflow: hidden;
+}
+
+
+
+/* Defino el estilo de las miniaturas de la galería para que la proporcion sea uniforme y bordes suavizados. */
+.gallery-thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+/* agrego una animacion sutil escalo un poco la imagen y reduzco opacidad */
+
+.gallery-thumb:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+
+/* primer conteiner texto + imagen */
+.segundo, .cuarto {
+  padding: 16px 16px;
+}
+
+
+/* Separación vertical cuando las columnas se apilan (mobile) */
+.segundo .row,
+.cuarto .row{
+  row-gap: 20px;
+}
+
+/* En mobile no bajo imágenes */
+.segundo img,
+.cuarto img{
+  margin-top: 0;
+}
+
+.segundo h2{
+    margin-top: 25px;
+}
+
+.segundo p, .cuarto p {
+    margin-bottom: 16px;
+}
+
+
+
+
+/* Botón del sitio */
+.btn-parvati {
+    border: 2px solid #a50104;
+    color: #a50104;
+    background-color: transparent;
+    padding: 10px 26px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+
+/* Interacción al pasar el cursor */
+.btn-parvati:hover {
+    background-color: #a50104;
+    color: #ffffff;
+}
+
+
+
+/* Banner con imagen de fondo */
+
+.cta-banner {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    margin: 100px 0 10px 0;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    overflow: hidden;
+}
+/* Banner Home */
+.banner-inicio {
+    background-image: url("../img/parvati9.gif");
+}
+
+/* Banner Origen */
+.banner-origen {
+    background-image: url("../img/parvati13.gif");
+}
+
+/* Banner propuesta */
+.banner-propuesta {
+    background-image: url("../img/nuevasgeneraciones.gif");
+}
+
+/* Banner gathering */
+.banner-gathering {
+    background-image: url("../img/bannergathering2.gif");
+}
+
+
+.banner-musica {
+    background-image: url("../img/bannermusica2.gif");
+}
+
+/* Overlay oscuro */
+.cta-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+
+
+
+/* Texto y botón por encima del overlay */
+.cta-contenido {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Defino el pie del sitio como cierre visual con fondo oscuro y contraste alto */
+.pie-sitio{
+    background-color: #000;
+    color: #eae9e9;
+    margin-top: 60px;
+}
+
+/* Texto principal del footer */
+.texto-footer{
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de enlaces complementarios solicitados por la consigna */
+.enlaces-footer{
+    margin-top: 10px;
+}
+
+.enlaces-footer a{
+    color: #eae9e9;
+    text-decoration: none;
+    margin: 0 8px;
+    transition: color 0.2s ease;
+}
+
+.enlaces-footer a:hover{
+    color: #a50104;
+}
+
+/* Separador visual entre enlaces */
+.separador{
+    opacity: 0.6;
+}
+
+/* Texto secundario inferior */
+.texto-pequeno{
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+
+
+.bloque-info{
+  background-color: #a50104;
+  color: #eae9e9;
+  padding: 80px 20px;
+}
+
+
+/* Bloques claros solo texto (h2 + p) */
+.bloque-texto{
+  padding: 120px 20px;   /* aire vertical */
+}
+
+/* Ajustes finos dentro del bloque */
+.bloque-texto h1,
+.bloque-texto .h2{
+  margin-bottom: 18px;
+}
+
+.bloque-texto p{
+  margin-bottom: 0;
+  line-height: 1.7;  /* mejora lectura y da aire */
+  max-width: 900px;  /* opcional: mejor ritmo */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+.btn-parvati2 {
+    border: 2px solid #eae9e9;
+    color: #eae9e9;
+    background-color: transparent;
+    padding: 10px 26px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-parvati2:hover {
+    background-color: #a50104;
+    border-color: #a50104;
+    color: white;
+}
+
+
+
+.img-dos {
+margin-top: 30px;
+    padding: 20px;
+
+}
+
+
+.gallery-thumb{
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.gallery-thumb:hover{
+  transform: scale(1.01);
+  opacity: .95;
+}
