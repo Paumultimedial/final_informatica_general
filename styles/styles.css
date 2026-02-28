@@ -299,3 +299,40 @@ margin-top: 30px;
   transform: scale(1.01);
   opacity: .95;
 }
+
+
+/* FORMULARIO CONTACTO */
+
+.formulario-contacto {
+  background-color: #e1e1e1; /* gris oscuro */
+  padding: 2.5rem;
+  border-radius: 18px;
+
+  /* separación visual */
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35),
+    0 0 0 1px rgba(255,255,255,0.04);
+
+  color: #6d2424;
+}
+
+/* inputs */
+.formulario-contacto .form-control,
+.formulario-contacto .form-select {
+  background-color: #a0a0a0;
+  border: 1px solid rgba(234,233,233,0.2);
+  color: #a50104;
+ 
+}
+
+.formulario-contacto .form-control:focus,
+.formulario-contacto .form-select:focus {
+  background-color: #0b0b0b;
+  border-color: rgba(234,233,233,0.45);
+  box-shadow: none;
+}
+
+/* labels */
+.formulario-contacto .form-label {
+  letter-spacing: 1px;
+}
