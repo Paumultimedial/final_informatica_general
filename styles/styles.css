@@ -138,7 +138,23 @@ elementos internos y controlar el recorte visual tipo banner. */
 
     overflow: hidden;
 }
+
+.banner{
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 /* Banner Home */
+.banner-inicial {
+    background-image: url("../img/bannerinicio.webp")
+}
+
+.banner-propuesta1 {
+    background-image: url("../img/bannerpropuesta.gif")
+}
 .banner-inicio {
     background-image: url("../img/parvati9.gif");
 }
@@ -162,6 +178,9 @@ elementos internos y controlar el recorte visual tipo banner. */
 .banner-musica {
     background-image: url("../img/bannermusica2.gif");
 }
+
+
+
 
 /* Overlay oscuro */
 .cta-banner::after {
