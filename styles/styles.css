@@ -336,3 +336,57 @@ margin-top: 30px;
 .formulario-contacto .form-label {
   letter-spacing: 1px;
 }
+
+
+
+
+
+
+/* =========================
+   OPCIONES DEL JUEGO
+========================= */
+
+.opcion {
+  padding: 12px 16px;
+  border: 1px solid #a50104;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* hover */
+.opcion:hover {
+  background-color: #a50104;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   SELECCION DE LA OPCION
+========================= */
+.seleccionada {
+  outline: 2px solid #a50104;
+  font-weight: 600;
+}
+
+
+/* =========================
+   Respuesta correcta e incorrecta
+=========================
+
+a la clase correcta, que cree en js , le agrego un pseudo elemento :after para que una vez que l ususario haga click en la respuesta me agregue un elemento, en este caso el emoji*/
+
+
+.correcta::after {
+    content: "✅";
+    margin-left: 16px;
+
+}
+
+
+.incorrecta::after {
+    content: "❌";
+    margin-left: 16px;
+
+}
