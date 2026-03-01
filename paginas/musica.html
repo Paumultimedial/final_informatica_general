@@ -21,87 +21,127 @@
 
 <body>
 
-    <!-- NAV (igual a tus páginas) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <div class="container">
+   <nav class="navbar navbar-expand-lg navbar-dark bg-black">
 
-            <a class="navbar-brand" href="../index.html">
-                <img src="../img/parvati-records-logo.gif" alt="Parvati Logo" height="60">
-            </a>
+    <!-- container centra el contenido y limita el ancho -->
+    <div class="container">
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- LOGO DEL SITIO
+             al hacer click vuelve al inicio -->
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/parvati-records-logo.gif" alt="Parvati Logo" height="60">
+        </a>
 
-            <div class="collapse navbar-collapse justify-content-end" id="menuNav">
-                <ul class="navbar-nav">
+        <!-- BOTÓN HAMBURGUESA (visible en mobile)
+             permite abrir/cerrar el menú -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menuNav">
 
-                    <!-- desplegable -->
-                    <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
+            <!-- icono hamburguesa generado por Bootstrap -->
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                            <!-- Link que navega -->
-                            <a class="nav-link" href="../paginas/origen.html">ORIGEN</a>
+        <!-- CONTENEDOR COLAPSABLE
+             se oculta en mobile y se expande en desktop -->
+        <div class="collapse navbar-collapse justify-content-end" id="menuNav">
 
-                            <!-- Botón que abre el dropdown -->
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
+            <!-- LISTA PRINCIPAL DE LINKS -->
+            <ul class="navbar-nav">
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
+     
+                <li class="nav-item dropdown">
 
-                                <li><a class="dropdown-item" href="./historia.html">Historia</a></li>
-                                <li><a class="dropdown-item" href="./evolucion.html">Evolución</a></li>
-                            </ul>
+                    <!-- link principal + disparador del dropdown -->
+                    <a class="nav-link dropdown-toggle"
+                       href="./origen.html"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
 
-                        </div>
-                    </li>
+                        ORIGEN
+                    </a>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            PROPUESTA
-                        </a>
+                    <!-- menú desplegable -->
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="./historia.html">Historia</a></li>
+                        <li><a class="dropdown-item" href="./evolucion.html">Evolución</a></li>
+                    </ul>
 
-                        <ul class="dropdown-menu dropdown-menu-dark">
+                </li>
 
-                            <li><a class="dropdown-item" href="./filosofia.html">Filosofía</a></li>
-                            <li><a class="dropdown-item" href="./comunidad.html">Comunidad</a></li>
-                        </ul>
-                    </li>
 
-                    <li class="nav-item"><a class="nav-link" href="./gathering.html">GATHERING</a></li>
+        
+                <li class="nav-item dropdown">
 
-                    <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
+                    <!-- link principal que también abre el dropdown -->
+                    <a class="nav-link dropdown-toggle"
+                       href="./propuesta.html"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
 
-                            <!-- Link que navega a la página principal -->
-                            <a class="nav-link" href="./musica.html">MÚSICA</a>
+                        PROPUESTA
+                    </a>
 
-                            <!-- Flechita que abre el dropdown -->
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
+                    <!-- opciones internas -->
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="./filosofia.html">Filosofía</a></li>
+                        <li><a class="dropdown-item" href="./comunidad.html">Comunidad</a></li>
+                    </ul>
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="./artistas.html">Artistas</a></li>
-                                <li><a class="dropdown-item" href="./estetica-sonora.html">Estética Sonora</a></li>
-                            </ul>
+                </li>
 
-                        </div>
-                    </li>
 
-                    <li class="nav-item"><a class="nav-link active" href="./galeria.html">GALERÍA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./experiencia.html">EXPERIENCIA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">CONTACTO</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./gathering.html">GATHERING</a>
+                </li>
 
-                </ul>
-            </div>
 
+    
+                <li class="nav-item dropdown d-flex align-items-center">
+
+                    <!-- link que lleva a la página principal -->
+                    <a class="nav-link" href="./musica.html">MÚSICA</a>
+
+                    <!-- flecha que abre solo el dropdown -->
+                    <a class="nav-link dropdown-toggle dropdown-toggle-split"
+                       href="#"
+                       role="button"
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
+
+                        <!-- accesibilidad para lectores de pantalla -->
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </a>
+
+                    <!-- submenu -->
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="./artistas.html">Artistas</a></li>
+                        <li><a class="dropdown-item" href="./estetica-sonora.html">Estética Sonora</a></li>
+                    </ul>
+
+                </li>
+
+
+            
+                <li class="nav-item">
+                    <a class="nav-link" href="./galeria.html">GALERÍA</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./experiencia.html">EXPERIENCIA</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                </li>
+
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

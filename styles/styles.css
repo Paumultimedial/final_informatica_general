@@ -288,17 +288,6 @@ margin-top: 30px;
 }
 
 
-.gallery-thumb{
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 14px;
-  transition: transform .2s ease, opacity .2s ease;
-}
-.gallery-thumb:hover{
-  transform: scale(1.01);
-  opacity: .95;
-}
 
 
 /* FORMULARIO CONTACTO */
@@ -389,4 +378,24 @@ a la clase correcta, que cree en js , le agrego un pseudo elemento :after para q
     content: "❌";
     margin-left: 16px;
 
+}
+
+
+/*  Estilos para el fondo que contiene la imagen seleccionada en la galeria  */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
 }

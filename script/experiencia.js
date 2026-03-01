@@ -17,6 +17,7 @@ const contenedorResultado = document.querySelector('#resultado')
 
 // selecciono el boton iniciar para detectar el click del usuario
 const btnIniciar = document.querySelector('#btnIniciar');
+const btnReiniciar = document.querySelector('#btnReiniciar');
 
 contenedorPregunta.textContent = "¿Listo para comenzar?";
 // Contenedor opciones queda vacio al iniciar 
@@ -25,13 +26,19 @@ contenedorOpciones.innerHTML = "";
 
 
 // Cuando el usuario hace click, se ejecuta la función iniciarJuego
+btnReiniciar.addEventListener('click', iniciarJuego);
+// Cuando el usuario hace click, se ejecuta la función iniciarJuego
 btnIniciar.addEventListener('click', iniciarJuego);
+
 
 // defino la funcion 
 function iniciarJuego() {
+    puntaje = 0; // importante reiniciar puntaje
     contenedorPregunta.textContent = "Elegí un tema:"; // cambio el contenido del texto de html por elegi una categoria
     contenedorOpciones.innerHTML = ""; // limpio por si apretan iniciar 2 veces
     btnIniciar.classList.add("d-none"); // opcional
+    btnReiniciar.classList.add("d-none"); 
+    contenedorResultado.innerHTML = "";
 
 
     // este es el arreglo con las dos opciones(claves) que arme en preguntasyrespuestas. El metodo forEach recorre todas las opciones y con la funcion flecha vamos a decir que hacer con cada una de estas opciones
@@ -51,14 +58,14 @@ function iniciarJuego() {
     const opciones = contenedorOpciones.querySelectorAll('.opcion')
 
 
-    // recorro las opciones y por cada una de estas opciones voy a hacer una accion
-    opciones.forEach((opcion) => {
-        //cuando el usuario haga click en alguna de estas opciones se ejecuta la funcion flecha
-        opcion.addEventListener('click', () => {
-            //Muestra los temas agregando opcion en el html 
-            const tema = opcion.textContent.trim();
-            // cuando haga click en alguna de las opcioknes llamo a la funcion seleccionar tema
-            seleccionarTema(tema)
+    
+    opciones.forEach((opcion) => {// recorro las opciones y por cada una de estas opciones voy a hacer una accion
+        
+        opcion.addEventListener('click', () => {//cuando el usuario haga click en alguna de estas opciones se ejecuta la funcion flecha
+           
+            const tema = opcion.textContent.trim();  //Muestra los temas agregando opcion en el html 
+            
+            seleccionarTema(tema)// cuando haga click en alguna de las opcioknes llamo a la funcion seleccionar tema
 
 
         })
@@ -67,8 +74,8 @@ function iniciarJuego() {
 
 
 
-// esta es la funcion que va a mostrar la pregunta del indice 0, accedo a la primera
-function seleccionarTema(tema) {
+
+function seleccionarTema(tema) {// esta es la funcion que va a mostrar la pregunta del indice 0, accedo a la primera
     preguntasSeleccionadas = preguntasYRespuestas[tema]
     mostrarPregunta(0)
 
@@ -96,30 +103,6 @@ function mostrarPregunta(indice) {
     mostrarOpciones(respuestas, respuestaCorrecta, indice);
 }
 
-activarClickRespuestas();
-
-
-
-
-// invoco la funcion que llame cuando se muestran las opciones con activarClickRespuestas
-function activarClickRespuestas() {
-
-    // declaro la constante que va a seleccionar todas las clases respuestas. 
-    const botones = contenedorOpciones.querySelectorAll(".respuesta");
-
-    // recorro todos los botones con foreach y agrego un addeventlistener para que escuche la accion del click 
-    botones.forEach((btn) => {
-        btn.addEventListener("click", () => {
-            // saco selección anterior
-            botones.forEach(b => b.classList.remove("seleccionada"));
-
-            // marco la actual
-            btn.classList.add("seleccionada");
-
-
-        });
-    });
-}
 
 
 
@@ -135,7 +118,6 @@ function mostrarOpciones(respuestas, respuestaCorrecta, indice) {
 
 
     const opciones = contenedorOpciones.querySelectorAll('.opcion');
-
     opciones.forEach((opcion) => {
 
         opcion.addEventListener('click', () => {
@@ -145,7 +127,7 @@ function mostrarOpciones(respuestas, respuestaCorrecta, indice) {
 
                 // la variable puntaje : 
                 puntaje++
-                
+
                 //Al elemento opcion le agrego una clase que se llama correcta a traves del metoodo classlist hago lo mismo cuando sea incorrecto(else)
                 opcion.classList.add('correcta')
 
@@ -170,6 +152,13 @@ function mostrarResultado() {
     // aca muestro el resultado, colocandole al h2 la variable de puntaje y la variable de preguntasSeleccionadas
     contenedorResultado.innerHTML = `<h2> Acertaste: ${puntaje} de ${preguntasSeleccionadas.length} </h2>
     `;
+
+
+     // remuevo la clase de boostrap d none para que lo vuelva a mostrar el boton reiniciar
+btnReiniciar.classList.remove("d-none");
+
 }
+
+
 
 

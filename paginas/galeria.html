@@ -20,89 +20,115 @@
 
 <body>
 
-    <!-- NAV (igual a tus páginas) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+
+        <!-- container centra el contenido y limita el ancho -->
         <div class="container">
 
+            <!-- LOGO DEL SITIO
+             al hacer click vuelve al inicio -->
             <a class="navbar-brand" href="../index.html">
                 <img src="../img/parvati-records-logo.gif" alt="Parvati Logo" height="60">
             </a>
 
+            <!-- BOTÓN HAMBURGUESA (visible en mobile)
+             permite abrir/cerrar el menú -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+
+                <!-- icono hamburguesa generado por Bootstrap -->
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- CONTENEDOR COLAPSABLE
+             se oculta en mobile y se expande en desktop -->
             <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+
+                <!-- LISTA PRINCIPAL DE LINKS -->
                 <ul class="navbar-nav">
 
-                    <!-- desplegable -->
+
                     <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
 
-                            <!-- Link que navega -->
-                            <a class="nav-link" href="../paginas/origen.html">ORIGEN</a>
+                        <!-- link principal + disparador del dropdown -->
+                        <a class="nav-link dropdown-toggle" href="./origen.html" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
 
-                            <!-- Botón que abre el dropdown -->
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
+                            ORIGEN
+                        </a>
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
+                        <!-- menú desplegable -->
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./historia.html">Historia</a></li>
+                            <li><a class="dropdown-item" href="./evolucion.html">Evolución</a></li>
+                        </ul>
 
-                                <li><a class="dropdown-item" href="./historia.html">Historia</a></li>
-                                <li><a class="dropdown-item" href="./evolucion.html">Evolución</a></li>
-                            </ul>
-
-                        </div>
                     </li>
 
+
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+
+                        <!-- link principal que también abre el dropdown -->
+                        <a class="nav-link dropdown-toggle" href="./propuesta.html" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
                             PROPUESTA
                         </a>
 
+                        <!-- opciones internas -->
                         <ul class="dropdown-menu dropdown-menu-dark">
-
                             <li><a class="dropdown-item" href="./filosofia.html">Filosofía</a></li>
                             <li><a class="dropdown-item" href="./comunidad.html">Comunidad</a></li>
                         </ul>
+
                     </li>
 
-                    <li class="nav-item"><a class="nav-link" href="./gathering.html">GATHERING</a></li>
 
-                    <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
-
-                            <!-- Link que navega a la página principal -->
-                            <a class="nav-link" href="./musica.html">MÚSICA</a>
-
-                            <!-- Flechita que abre el dropdown -->
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
-
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="./artistas.html">Artistas</a></li>
-                                <li><a class="dropdown-item" href="./estetica-sonora.html">Estética Sonora</a></li>
-                            </ul>
-
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./gathering.html">GATHERING</a>
                     </li>
 
-                    <li class="nav-item"><a class="nav-link active" href="./galeria.html">GALERÍA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./experiencia.html">EXPERIENCIA</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contacto.html">CONTACTO</a></li>
+
+
+                    <li class="nav-item dropdown d-flex align-items-center">
+
+                        <!-- link que lleva a la página principal -->
+                        <a class="nav-link" href="./musica.html">MÚSICA</a>
+
+                        <!-- flecha que abre solo el dropdown -->
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <!-- accesibilidad para lectores de pantalla -->
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
+
+                        <!-- submenu -->
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./artistas.html">Artistas</a></li>
+                            <li><a class="dropdown-item" href="./estetica-sonora.html">Estética Sonora</a></li>
+                        </ul>
+
+                    </li>
+
+
+                   
+                    <li class="nav-item">
+                        <a class="nav-link" href="./galeria.html">GALERÍA</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./experiencia.html">EXPERIENCIA</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">CONTACTO</a>
+                    </li>
 
                 </ul>
             </div>
-
         </div>
     </nav>
-
-
 
 
     <!-- GALERÍA -->
@@ -116,28 +142,27 @@
             <!-- Mosaico -->
             <div class="row g-4">
 
+
+
+
                 <!-- Columna izquierda (4 imágenes) -->
                 <div class="col-12 col-lg-6">
                     <div class="row g-4">
                         <div class="col-6">
-                            <img src="../img/galeria2.jpg" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/galeria2.jpg" data-title="Parvati — Visual 01" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 01">
+                            <img src="../img/galeria2.jpg" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 01">
                         </div>
                         <div class="col-6">
-                            <img src="../img/galeria3.JPG" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/galeria3.JPG" data-title="Parvati — Visual 02" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 02">
+                            <img src="../img/galeria3.JPG" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 02">
                         </div>
                         <div class="col-6">
-                            <img src="../img/galeria4.JPG" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/galeria4.JPG" data-title="Parvati — Visual 03" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 03">
+                            <img src="../img/galeria4.JPG" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 03">
                         </div>
                         <div class="col-6">
-                            <img src="../img/galeria5.JPG" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/galeria5.JPG" data-title="Parvati — Visual 04" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 04">
+                            <img src="../img/galeria5.JPG" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 04">
                         </div>
                     </div>
                 </div>
@@ -146,24 +171,20 @@
                 <div class="col-12 col-lg-6">
                     <div class="row g-4">
                         <div class="col-6">
-                            <img src="../img/galeria6.JPG" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/galeria6.JPG" data-title="Parvati — Visual 05" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 05">
+                            <img src="../img/galeria6.JPG" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 05">
                         </div>
                         <div class="col-6">
-                            <img src="../img/galeria7.JPG" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/galeria7.JPG" data-title="Parvati — Visual 06" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 06">
+                            <img src="../img/galeria7.JPG" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 06">
                         </div>
                         <div class="col-6">
-                            <img src="../img/parvati22.gif" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/parvati22.gif" data-title="Parvati — Visual 07" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 07">
+                            <img src="../img/galeria8.jpg" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 07">
                         </div>
                         <div class="col-6">
-                            <img src="../img/parvati23.gif" class="img-fluid gallery-thumb js-gallery"
-                                data-full="../img/parvati23.gif" data-title="Parvati — Visual 08" data-bs-toggle="modal"
-                                data-bs-target="#modalGaleria" alt="Visual Parvati 08">
+                            <img src="../img/galeria9.jpg" class="img-fluid gallery-thumb galeria-img"
+                                alt="Visual Parvati 08">
                         </div>
                     </div>
                 </div>
@@ -174,37 +195,50 @@
 
 
 
-
-
-    <!-- MODAL GALERÍA -->
-    <div class="modal fade" id="modalGaleria" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-black border-0">
-                <div class="modal-body p-2">
-                    <img id="modalImg" src="" class="img-fluid rounded-4" alt="">
-                    <p class="small opacity-75 mt-3 mb-0 px-2" id="modalCaption"></p>
-                </div>
-                <div class="modal-footer border-0 pt-0">
-                    <button type="button" class="btn btn-outline-light btn-sm" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
+    <div class="lightbox">
+        <img class="lightbox-img" src="" alt="Imagen ampliada">
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        document.querySelectorAll('.js-gallery').forEach(img => {
-            img.addEventListener('click', () => {
-                const full = img.dataset.full || img.src;
-                const title = img.dataset.title || '';
 
-                document.getElementById('modalImg').src = full;
-                document.getElementById('modalImg').alt = img.alt || 'Imagen de galería';
-                document.getElementById('modalCaption').textContent = title;
+        // selecciono todas las imágenes de la galería que tienen la clase "galeria-img".
+        // estas van a ser las que reaccionen cuando el usuario haga click.
+        const imagenes = document.querySelectorAll('.galeria-img');
+
+        // Selecciono el contenedor del lightbox, que funciona como fondo oscuro
+        // y aparece por encima del sitio cuando se abre una imagen.
+        const lightbox = document.querySelector('.lightbox');
+
+        // selecciono la imagen que se mostrará ampliada dentro del lightbox.
+        const imgAmpliada = document.querySelector('.lightbox-img');
+
+        // oculto el lightbox antes de que se ejecute la funcion
+        lightbox.style.display = 'none';
+
+
+        // con el foreach recorro cada imagen de la galería para agregarle un evento de click, con la funcion flecha imagen 
+        imagenes.forEach(imagen => {
+
+            // Cuando el usuario hace click en una imagen:
+            imagen.addEventListener('click', () => {
+
+                // Muestro el lightbox cambiando su display a "flex".
+                lightbox.style.display = 'flex';
+
+                // Cambio la fuente (src) de la imagen ampliada
+                // utilizando la misma imagen que fue seleccionada.
+                imgAmpliada.src = imagen.src;
             });
         });
+
+//Cierro cuando se hace click y con la funcion flecha le indico la accion que tienen que hacer cuando se ejecute el evento click- vuelve a desactivarse el lightbox con none
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+
     </script>
+
 
 
     <!-- FOOTER -->

@@ -14,7 +14,6 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles/main.css">
 
     <link rel="stylesheet" href="styles/styles.css">
 
@@ -40,43 +39,34 @@
             <div class="collapse navbar-collapse justify-content-end" id="menuNav">
                 <ul class="navbar-nav">
 
-                      <!-- desplegable -->
-                    <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
+                    <!-- ORIGEN (click navega + flecha abre dropdown) -->
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link" href="./paginas/origen.html">ORIGEN</a>
 
-                            <!-- Link que navega -->
-                            <a class="nav-link" href="./paginas/origen.html">ORIGEN</a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
 
-                            <!-- Botón que abre el dropdown -->
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
-
-                            <ul class="dropdown-menu dropdown-menu-dark">
-
-                                <li><a class="dropdown-item" href=".paginas/historia.html">Historia</a></li>
-                                <li><a class="dropdown-item" href=".paginas/evolucion.html">Evolución</a></li>
-                            </ul>
-
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./paginas/historia.html">Historia</a></li>
+                            <li><a class="dropdown-item" href="./paginas/evolucion.html">Evolución</a></li>
+                        </ul>
                     </li>
 
                     <!-- PROPUESTA (click navega + flecha abre dropdown) -->
-                    <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
-                            <a class="nav-link" href="./paginas/propuesta.html">PROPUESTA</a>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link" href="./paginas/propuesta.html">PROPUESTA</a>
 
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="./paginas/filosofia.html">Filosofía</a></li>
-                                <li><a class="dropdown-item" href="./paginas/comunidad.html">Comunidad</a></li>
-                            </ul>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./paginas/filosofia.html">Filosofía</a></li>
+                            <li><a class="dropdown-item" href="./paginas/comunidad.html">Comunidad</a></li>
+                        </ul>
                     </li>
 
                     <!-- GATHERING -->
@@ -85,21 +75,18 @@
                     </li>
 
                     <!-- MÚSICA (click navega + flecha abre dropdown) -->
-                    <li class="nav-item dropdown">
-                        <div class="d-flex align-items-center">
-                            <a class="nav-link" href="./paginas/musica.html">MÚSICA</a>
+                    <li class="nav-item dropdown d-flex align-items-center">
+                        <a class="nav-link" href="./paginas/musica.html">MÚSICA</a>
 
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <span class="visually-hidden">Toggle Dropdown</span>
-                            </a>
+                        <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="visually-hidden">Toggle Dropdown</span>
+                        </a>
 
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="./paginas/artistas.html">Artistas</a></li>
-                                <li><a class="dropdown-item" href="./paginas/estetica-sonora.html">Estética Sonora</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="./paginas/artistas.html">Artistas</a></li>
+                            <li><a class="dropdown-item" href="./paginas/estetica-sonora.html">Estética Sonora</a></li>
+                        </ul>
                     </li>
 
                     <!-- GALERÍA -->
@@ -119,11 +106,8 @@
 
                 </ul>
             </div>
-
         </div>
     </nav>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- banner inicio -->
     <div class="banner"
@@ -147,29 +131,32 @@
     </div>
 
 
+
     <!-- Grid imagenes -->
     <section class="container mb-5 pb-5">
         <div class="row g-4">
             <div class="col-6 col-lg-4">
-                <img class="img-fluid gallery-thumb" src="img/parvati23.gif" alt="Parvati23">
+                <img class="img-fluid gallery-thumb" src="/img/grilla1.gif" alt="Parvati - grilla 1">
             </div>
             <div class="col-6 col-lg-4">
-                <img class="img-fluid gallery-thumb" src="img/galeria2.JPG" alt="Parvati - Imagen 2">
+                <img class="img-fluid gallery-thumb" src="/img/grilla2.gif" alt="Parvati - Grilla 2">
             </div>
             <div class="col-6 col-lg-4">
-                <img class="img-fluid gallery-thumb" src="img/galeria3.JPG" alt="Parvati - Imagen 3">
+                <img class="img-fluid gallery-thumb" src="/img/grilla3.gif" alt="Parvati - Grilla 3">
             </div>
             <div class="col-6 col-lg-4">
-                <img class="img-fluid gallery-thumb" src="img/galeria4.JPG" alt="Parvati - Imagen 4">
+                <img class="img-fluid gallery-thumb" src="/img/grilla4.gif" alt="Parvati - Grilla 4">
             </div>
             <div class="col-6 col-lg-4">
-                <img class="img-fluid gallery-thumb" src="img/galeria5.JPG" alt="Parvati - Imagen 5">
+                <img class="img-fluid gallery-thumb" src="/img/grilla5.gif" alt="Parvati - Grilla 5">
             </div>
             <div class="col-6 col-lg-4">
-                <img class="img-fluid gallery-thumb" src="img/galeria6.JPG" alt="Parvati - Imagen 6">
+                <img class="img-fluid gallery-thumb" src="/img/grilla6.gif" alt="Parvati - Grilla 6">
             </div>
         </div>
     </section>
+
+
 
 
     <div class="segundo">
@@ -229,6 +216,8 @@
     </div>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <footer class="pie-sitio">
         <div class="container text-center py-4">
 
@@ -237,9 +226,9 @@
             </p>
 
             <div class="enlaces-footer">
-                <a href="contacto.html">Contacto</a>
+                <a href="./paginas/contacto.html">Contacto</a>
                 <span class="separador">|</span>
-                <a href="datos.html">Información Alumna</a>
+                <a href="./paginas/datos.html">Información Alumna</a>
             </div>
 
             <p class="texto-pequeno mt-3">
